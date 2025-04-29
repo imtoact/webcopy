@@ -3,19 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="{{ page.description | default: site.description }}">
 </head>
 <body>
   <header>
-    <h1>{{ site.title }}</h1>
-    <p><strong>Tu colaborador estratégico — un modelo que se adapta a tu equipo, calendario y presupuesto</strong></p>
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="/">
+          <img src="/assets/images/imactive logo.png" alt="Logo Imactive" class="logo-image" />
+        </a>
+      </div>
+      <p class="tagline"><strong>Tu colaborador estratégico — un modelo que se adapta a tu equipo, calendario y presupuesto</strong></p>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/" class="nav-link">Inicio</a></li>
+          <li><a href="/about/" class="nav-link">Quiénes somos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
+  <div class="content-wrapper">
     {{ content }}
-  </main>
+  </div>
   <footer>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="/assets/images/imactive logo.png" alt="Logo Imactive" class="footer-logo-image" />
+      </div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/about/">Quiénes somos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <p class="copyright">&copy; {{ site.time | date: '%Y' }} Imactive. Todos los derechos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>
