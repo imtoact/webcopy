@@ -3,7 +3,10 @@ name: Build and deploy Jekyll site to GitHub Pages
 on:
   push:
     branches:
-      - main # o master, dependiendo de tu rama principal
+      - main
+
+permissions:
+  id-token: write
 
 jobs:
   github-pages:
