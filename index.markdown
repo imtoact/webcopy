@@ -53,7 +53,7 @@ layout: home
     <!-- Panel lateral con "Sobre mí" (ahora a la derecha) -->
     <aside class="sidebar-about">
       <div class="about-container">
-        <img src="/assets/images/Inma.jpeg" alt="Portrait of Inma, a professional with expertise in team integration and strategic projects" class="about-photo" />
+        <img src="{{ site.baseurl }}/assets/images/Inma.jpeg" alt="Portrait of Inma, a professional with expertise in team integration and strategic projects" class="about-photo" />
         <h2>Sobre mí</h2>
         <p>Soy Inma, profesional con experiencia en integración de equipos, ejecución de proyectos estratégicos y desarrollo de capacidades en organizaciones. Mi enfoque es práctico, flexible y orientado a resultados tangibles, colaborando estrechamente con los equipos para lograr objetivos reales sin ataduras ni burocracia.</p>
       </div>
